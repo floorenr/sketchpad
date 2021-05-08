@@ -1,12 +1,14 @@
 const container = document.querySelector('.container');
-let resolution = 16;
-let totalBlocks = (resolution ** 2);
 
-for (let i = 0; i < 256; i++) {
-  const div = document.createElement('div');
-  div.classList.add('sketchblocks'); 
-  container.appendChild(div);
-}
+function setupSketchfield() {
+  for (let i = 0; i < totalBlocks; i++) {
+    const div = document.createElement('div');
+    div.classList.add('sketchblocks'); 
+    container.appendChild(div);
+  }
+};
+
+setupSketchfield();
 
 const divs = document.querySelectorAll('.sketchblocks');
 
@@ -24,6 +26,6 @@ function reset() {
   if ((input > 100) || (input < 1) || (isNaN(input))) {
     alert("Please enter a number between 1 and 100");
     return;
-  
+    setupSketchfield();
   }
 }
