@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 let resolution = 16;
-let totalBlocks = (resolution * 2);
+let totalBlocks = (resolution ** 2);
 
 for (let i = 0; i < 256; i++) {
   const div = document.createElement('div');
