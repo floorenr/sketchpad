@@ -13,3 +13,9 @@ divs.forEach((div) => {
     div.style.backgroundColor = 'black';
   });
 });
+
+function reset() {
+  divs.forEach((div) => {
+    div.style.backgroundColor = 'white';
+  });
+}
