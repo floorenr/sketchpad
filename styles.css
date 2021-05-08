@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  height: 100vmin;
+  height: calc(100vmin - 21px);
   width: 100vmin;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
