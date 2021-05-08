@@ -6,7 +6,7 @@ for (let i = 0; i < 256; i++) {
   container.appendChild(div);
 }
 
-const divs = document.querySelectorAll('div');
+const divs = document.querySelectorAll('.sketchblocks');
 
 divs.forEach((div) => {
   div.addEventListener('mouseover', () => {
