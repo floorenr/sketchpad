@@ -1,4 +1,6 @@
-const container = document.querySelector('.container')
+const container = document.querySelector('.container');
+let resolution = 16;
+let totalBlocks = (resolution * 2);
 
 for (let i = 0; i < 256; i++) {
   const div = document.createElement('div');
@@ -22,5 +24,6 @@ function reset() {
   if ((input > 100) || (input < 1) || (isNaN(input))) {
     alert("Please enter a number between 1 and 100");
     return;
+  
   }
 }
