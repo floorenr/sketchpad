@@ -4,8 +4,10 @@ const body = document.querySelector('body');
 
 function addListeners() {
   divs.forEach((div) => {
-    div.addEventListener('mouseover', () => {
-      div.style.backgroundColor = 'black';
+    div.addEventListener('mouseenter', () => {
+      let opac = Number(div.getAttribute('opac'));
+      div.style.setProperty("--opacity", opac + 0.2);
+      div.setAttribute('opac', (opac + 0.2));
     });
   });
 }
@@ -14,9 +16,11 @@ function setupSketchfield(resolution) {
   let totalBlocks = (resolution ** 2);
   for (let i = 0; i < totalBlocks; i++) {
     const div = document.createElement('div');
-    div.classList.add('sketchblocks'); 
+    div.classList.add('sketchblocks');
+    let opac = Number(0); 
+    div.setAttribute('opac', opac);
     div.setAttribute('style', 'background: black; opacity: var(--opacity)');
-    div.style.setProperty("--opacity", 0 );
+    div.style.setProperty("--opacity", opac);
     container.appendChild(div);
   }
   divs = document.querySelectorAll('.sketchblocks');
