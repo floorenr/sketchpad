@@ -11,7 +11,7 @@ function setupSketchfield(resolution) {
 
 setupSketchfield(16);
 
-const divs = document.querySelectorAll('.sketchblocks');
+let divs = document.querySelectorAll('.sketchblocks');
 
 divs.forEach((div) => {
   div.addEventListener('mouseover', () => {
@@ -28,6 +28,14 @@ function reset() {
     alert("Please enter a number between 1 and 100");
     return;}
   else { 
+    removeSketchblocks();
     setupSketchfield(input);
+  }
+}
+
+function removeSketchblocks() {
+  divs = document.querySelectorAll('.sketchblocks');
+  for (let i = 0; i < divs.length; i++) {
+    container.removeChild(divs[i]);
   }
 }
