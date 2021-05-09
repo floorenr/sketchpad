@@ -1,4 +1,13 @@
 const container = document.querySelector('.container');
+let divs = document.querySelectorAll('.sketchblocks');
+
+function addListeners() {
+  divs.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = 'black';
+    });
+  });
+}
 
 function setupSketchfield(resolution) {
   let totalBlocks = (resolution ** 2);
@@ -6,18 +15,14 @@ function setupSketchfield(resolution) {
     const div = document.createElement('div');
     div.classList.add('sketchblocks'); 
     container.appendChild(div);
+    divs = document.querySelectorAll('.sketchblocks');
+    addListeners();
   }
 };
 
 setupSketchfield(16);
 
-let divs = document.querySelectorAll('.sketchblocks');
 
-divs.forEach((div) => {
-  div.addEventListener('mouseover', () => {
-    div.style.backgroundColor = 'black';
-  });
-});
 
 function reset() {
   divs.forEach((div) => {
