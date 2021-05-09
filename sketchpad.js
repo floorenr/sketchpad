@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 let divs = document.querySelectorAll('.sketchblocks');
+const body = document.querySelector('body');
 
 function addListeners() {
   divs.forEach((div) => {
