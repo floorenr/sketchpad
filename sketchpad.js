@@ -15,9 +15,9 @@ function setupSketchfield(resolution) {
     const div = document.createElement('div');
     div.classList.add('sketchblocks'); 
     container.appendChild(div);
-    divs = document.querySelectorAll('.sketchblocks');
-    addListeners();
   }
+  divs = document.querySelectorAll('.sketchblocks');
+  addListeners();
 };
 
 setupSketchfield(16);
