@@ -15,6 +15,8 @@ function setupSketchfield(resolution) {
   for (let i = 0; i < totalBlocks; i++) {
     const div = document.createElement('div');
     div.classList.add('sketchblocks'); 
+    div.setAttribute('style', 'background: black; opacity: var(--opacity)');
+    div.style.setProperty("--opacity", 0 );
     container.appendChild(div);
   }
   divs = document.querySelectorAll('.sketchblocks');
@@ -26,9 +28,6 @@ setupSketchfield(16);
 
 
 function reset() {
-  divs.forEach((div) => {
-    div.style.backgroundColor = 'white';
-  });
   let input = parseInt(prompt("Set resolution of next Etch-a-Sketch (1-100)"));
   if ((input > 100) || (input < 1) || (isNaN(input))) {
     alert("Please enter a number between 1 and 100");
