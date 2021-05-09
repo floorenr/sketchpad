@@ -1,3 +1,7 @@
+button {
+  margin: 2px;
+}
+
 body {
   --resolution: 16;
   margin:0;
@@ -8,7 +12,7 @@ body {
 }
 
 .container {
-  height: calc(100vmin - 23px);
+  height: calc(100vmin - 29px);
   width: calc(100vmin - 2px);
   display: grid;
   grid-template-columns: repeat(var(--resolution), 1fr);
@@ -16,4 +20,5 @@ body {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
+  margin-bottom: 2px;
 }
