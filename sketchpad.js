@@ -34,6 +34,7 @@ function reset() {
     alert("Please enter a number between 1 and 100");
     return;}
   else { 
+    body.style.setProperty("--resolution", input);
     removeSketchblocks();
     setupSketchfield(input);
   }
